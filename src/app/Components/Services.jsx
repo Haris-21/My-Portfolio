@@ -5,6 +5,7 @@ import uiux from '../images/uiux.jpg'
 import performance from '../images/optimization.jpg'
 import browser from '../images/cross-browser.jpg'
 import Image from "next/image";
+import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 
 
 
@@ -37,43 +38,30 @@ export default function Services(){
     return(
         <>
         <div className="w-full h-full flex justify-center items-start pt-[4rem] pb-[4rem] bg-black">
-            <div className="w-[80%] font-sans flex flex-col items-center">
+            <div className="2xl:w-[80%] lg:w-[95%] xl:w-[90%] md:w-[90%] sm:w-[90%] font-sans flex flex-col items-center">
                 <h1 className="text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">Services</h1>
                 <h2 className="text-zinc-500 text-3xl mb-[3rem]">
                     I specialize in building 
                      <FlipWords words={words} /> <br/>
                     websites that bring your digital vision to life.
                 </h2>
-                <div className="flex justify-between items-start">
+                <div className="grid 2xl:grid-cols-3 lg:grid-cols-3 gap-4 md:grid-cols-1">
                         {
                             services.map((item, idx) => (
-                                <CardContainer key={idx} className="inter-var mr-4">
-                                    <CardBody className=" relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] bg-black border-zinc-700 w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-                                        <CardItem
-                                        translateZ="50"
-                                        className="text-xl font-bold text-white"
-                                        >
-                                        {item.title}
-                                        </CardItem>
-                                        <CardItem
-                                        as="p"
-                                        translateZ="60"
-                                        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-                                        >
-                                        {item.description}
-                                        </CardItem>
-                                        <CardItem translateZ="100" className="w-full mt-4">
-                                         <Image
+                               
+                                  <NeonGradientCard key={idx} className="items-center justify-center text-white bg-black">
+                                    <div className="flex flex-col justify-between">
+                                        <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                                        <p className="mb-4">{item.description}</p>
+                                          <Image
                                                 src={item.image}
                                                 height={1000}
                                                 width={1000}
-                                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                                className="h-60 w-full object-cover rounded-xl"
                                                 alt={item.title}
                                             />
-                                        </CardItem>
-                                
-                                    </CardBody>
-                                </CardContainer>
+                                    </div>  
+                                  </NeonGradientCard>
                             ))
                         }
                         

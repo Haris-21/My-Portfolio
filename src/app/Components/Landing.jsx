@@ -5,10 +5,10 @@ export default function Landing(){
     return(
         <>
         <div className="w-full bg-black ">
-            <section>
+            <section id="hero">
                 <Hero/>
             </section>
-            <section>
+            <section id="services">
                 <Services/>
             </section>
         </div>

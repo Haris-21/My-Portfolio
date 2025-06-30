@@ -32,7 +32,7 @@ export default function Hero(){
 
     return(
         <div className="relative flex flex-col justify-center items-center w-full h-screen border-b border-gray-700">
-            <div className="text-white text-center font-sans font-semibold">
+            <div className="2xl:w-[80%] lg:w-[95%] xl:w-[90%] md:w-[90%] sm:w-[90%] text-white text-center font-sans font-semibold flex flex-col items-center">
                 <h2 className="text-4xl">Hey, This is</h2>
                 <h1 className="text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">Kunwar Muhammad Haris</h1>
                 <h1 className="text-5xl">I'm <AuroraText>Software Engineer</AuroraText></h1> 
