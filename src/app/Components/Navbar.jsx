@@ -15,7 +15,7 @@ const [isOpen, setIsOpen] = useState(false);
     <>
     <nav 
     className="w-full fixed top-0 left-0 z-50 bg-black/60 border-b font-sans border-gray-700 p-4 flex justify-center items-center gap-4 backdrop-blur-lg shadow-lg">
-        <div className='2xl:w-[80%] lg:w-[90%] xl:w-[90%] md:w-[95%] sm:w-[95%] flex items-center justify-between'>
+        <div className='2xl:w-[80%] lg:w-[90%] xl:w-[90%] md:w-[95%] sm:w-[95%] xs:w-[90%] 2xs:w-[90%] 3xs:w-[90%] flex items-center justify-between'>
             <Link href="#hero" className='flex items-center gap-1 text-3xl font-semibold font-sans'>
               <h1 className='text-white'>Dev</h1>
               <span className='text-gray-700 text-3xl'>
@@ -49,15 +49,15 @@ const [isOpen, setIsOpen] = useState(false);
                 <IoMdClose />
               </button>
             </div>
-            <div className='flex flex-col space-y-4 text-white'>
-              <Link href="#services" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 rounded px-4 py-2'>Services</Link>
-              <Link href="#experience" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 rounded px-4 py-2'>Experience</Link>
-              <Link href="#projects" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 rounded px-4 py-2'>Projects</Link>
+            <div className='flex flex-col text-white gap-4'>
+              <Link href="#services" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 px-4 py-2 border-b border-zinc-700'>Services</Link>
+              <Link href="#experience" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 px-4 py-2 border-b border-zinc-700'>Experience</Link>
+              <Link href="#projects" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 px-4 py-2 border-b border-zinc-700'>Projects</Link>
               <a 
                 href="https://wa.me/923331321400?text=Hi%20Haris%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect."
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:bg-zinc-700 rounded px-4 py-2"
+                className="mt-8"
               >
               <ShimmerButton className="pl-4 pr-4 p-2">
                 Contact Me
