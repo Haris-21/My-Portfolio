@@ -97,7 +97,7 @@ export const TypewriterEffectSmooth = ({
       <div>
         {wordsArray.map((word, idx) => {
           return (
-            <div key={`word-${idx}`} className="inline-block 2xl:mr-3 lg:mr-3 xl:mr-3 md:mr-3 sm:mr-3 xs:mr-2 2xs:mr-2 3xs:mr-2">
+            <div key={`word-${idx}`} className="inline-block 2xl:mr-3 lg:mr-3 xl:mr-3 md:mr-3 sm:mr-3 xs:mr-2 2xs:mr-2 3xs:mr-2 2xl:text-5xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xs:text-lg 2xs:text-md 3xs:text-md">
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
@@ -149,7 +149,7 @@ export const TypewriterEffectSmooth = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "block rounded-sm w-[4px] h-4 sm:h-6 xl:h-12 bg-blue-500",
+          "block rounded-sm w-[4px] h-10 xs:h-6 2xs:h-4 3xs:h-4 sm:h-6 xl:h-12 bg-blue-500",
           cursorClassName
         )}></motion.span>
     </div>

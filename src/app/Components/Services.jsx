@@ -6,6 +6,7 @@ import performance from '../images/optimization.jpg'
 import browser from '../images/cross-browser.jpg'
 import Image from "next/image";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
+import { WordRotate } from "@/components/magicui/word-rotate";
 
 
 
@@ -40,11 +41,17 @@ export default function Services(){
         <div className="w-full h-full flex justify-center items-start pt-[4rem] pb-[4rem] bg-black">
             <div className="2xl:w-[80%] lg:w-[95%] xl:w-[90%] md:w-[90%] sm:w-[90%] xs:w-[90%] 2xs:w-[90%] 3xs:w-[90%] font-sans flex flex-col items-center">
                 <h1 className="2xl:text-7xl xl:text-7xl lg:text-7xl md:text-7xl sm:text-7xl xs:text-5xl 2xs:text-5xl 3xs:text-5xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">Services</h1>
-                <h2 className="text-zinc-500 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-3xl xs:text-md 2xs:text-md 3xs:text-md 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center xs:text-left 2xs:text-left 3xs:text-left mb-[3rem]">
+                <h2 className="text-zinc-500 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-3xl xs:text-md 2xs:text-md 3xs:text-md 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center xs:text-left 2xs:text-left 3xs:text-left flex items-center gap-3">
                     I specialize in building 
-                     <FlipWords words={words} /> <br/>
-                    websites that bring your digital vision to life.
+                      <WordRotate
+                    className=" 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-3xl xs:text-md 2xs:text-md 3xs:text-md text-white"
+                    words={["responsive", "user-centric","high-performance"]}
+                    /><br/>
                 </h2>
+                <h2 
+                className="text-zinc-500 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-3xl xs:text-md 2xs:text-md 3xs:text-md 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center xs:text-left 2xs:text-left 3xs:text-left mb-[3rem]"
+                >
+                    websites that bring your digital vision to life.</h2>
                 <div className="grid 2xl:grid-cols-3 lg:grid-cols-3 gap-4 md:grid-cols-1">
                         {
                             services.map((item, idx) => (
