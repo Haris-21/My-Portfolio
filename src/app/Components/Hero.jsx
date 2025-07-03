@@ -47,8 +47,10 @@ export default function Hero(){
                   </a>
                   <div className="flex justify-between items-center gap-3">
                     <span className="text-3xl 2xl:block xl:block lg:block md:block sm:block xs:hidden 2xs:hidden 3xs:hidden"><RxDividerVertical/></span>
-                    <a href="https://www.linkedin.com/in/kunwar-muhammad-haris-20054422b/" className="text-2xl p-2 rounded-full bg-zinc-700"><FaLinkedinIn/></a>
-                    <a href="https://github.com/Haris-21" className="text-2xl p-2 rounded-full bg-zinc-600"><TbBrandGithubFilled/></a>
+                    <a href="https://www.linkedin.com/in/kunwar-muhammad-haris-20054422b/"   target="_blank" rel="noopener noreferrer" 
+                    className="text-2xl p-2 rounded-full bg-zinc-700"><FaLinkedinIn/></a>
+                    <a href="https://github.com/Haris-21" target="_blank" rel="noopener noreferrer" 
+                    className="text-2xl p-2 rounded-full bg-zinc-600"><TbBrandGithubFilled/></a>
                     <a href="mailto:kunwarharis2004@gmail.com" className="text-2xl p-2 rounded-full bg-zinc-600"><SiGmail/></a>
                   </div>
                 </div>                
