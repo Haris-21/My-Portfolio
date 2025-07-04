@@ -15,18 +15,26 @@ const [isOpen, setIsOpen] = useState(false);
     <>
     <nav 
     className="w-full fixed top-0 left-0 z-50 bg-black/60 border-b font-sans border-gray-700 p-4 flex justify-center items-center gap-4 backdrop-blur-lg shadow-lg">
-        <div className='2xl:w-[80%] lg:w-[90%] xl:w-[90%] md:w-[95%] sm:w-[95%] xs:w-[90%] 2xs:w-[90%] 3xs:w-[90%] flex items-center justify-between'>
-            <Link href="#hero" className='flex items-center gap-1 text-3xl font-semibold font-sans'>
-              <h1 className='text-white'>Dev</h1>
-              <span className='text-gray-700 text-3xl'>
-                <GoDotFill/>
-              </span>
-              <h1 className='text-white'>Haris</h1>
-            </Link>
+        <div className='2xl:w-[80%] lg:w-[90%] xl:w-[90%] md:w-[95%] sm:w-[95%] xs:w-[100%] 2xs:w-[100%] 3xs:w-[100%] flex items-start justify-between'>
+            <div className='flex items-center gap-2'>
+              <div className="md:hidden text-white text-3xl" onClick={() => setIsOpen(true)}>
+                  <GiHamburgerMenu />
+              </div>
+
+              <Link href="#hero" className='flex items-center gap-1 text-3xl font-semibold font-sans'>
+                <h1 className='text-white'>Dev</h1>
+                <span className='text-gray-700 text-3xl'>
+                  <GoDotFill/>
+                </span>
+                <h1 className='text-white'>Haris</h1>
+              </Link>
+            </div>
             <div className='hidden md:flex items-center gap-3 text-white'>
                 <Link href="#services" className='p-1 pl-2 pr-2 hover:bg-zinc-700 transition-all duration-[0.3s] rounded-full'>Services</Link>
                 <Link href="#experience" className='p-1 pl-2 pr-2 hover:bg-zinc-700 transition-all duration-[0.3s] rounded-full'>Experience</Link>
                 <Link href="#projects" className='p-1 pl-2 pr-2 hover:bg-zinc-700 transition-all duration-[0.3s] rounded-full'>Projects</Link>
+                <Link href="#skills" className='p-1 pl-2 pr-2 hover:bg-zinc-700 transition-all duration-[0.3s] rounded-full'>Skills</Link>
+                
                 <a 
                   href="https://wa.me/923331321400?text=Hi%20Haris%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect."
                   target="_blank" 
@@ -37,10 +45,18 @@ const [isOpen, setIsOpen] = useState(false);
                   </ShimmerButton>
                 </a>
             </div>
+             <a 
+                href="https://wa.me/923331321400?text=Hi%20Haris%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect."
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="md:hidden 3xs:hidden xs:block 2xs:block"
+              >
+              <ShimmerButton className="pl-4 pr-4 p-2">
+                Contact Me
+              </ShimmerButton>
+              </a>
 
-            <div className="md:hidden text-white text-3xl" onClick={() => setIsOpen(true)}>
-                <GiHamburgerMenu />
-            </div>
+            
 
              {/* Mobile menu */}
          <div className={`fixed top-0 right-0 h-screen w-[60%] bg-black border-l border-zinc-700 z-50 p-6 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
@@ -53,16 +69,9 @@ const [isOpen, setIsOpen] = useState(false);
               <Link href="#services" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 px-4 py-2 border-b border-zinc-700'>Services</Link>
               <Link href="#experience" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 px-4 py-2 border-b border-zinc-700'>Experience</Link>
               <Link href="#projects" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 px-4 py-2 border-b border-zinc-700'>Projects</Link>
-              <a 
-                href="https://wa.me/923331321400?text=Hi%20Haris%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect."
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="mt-8"
-              >
-              <ShimmerButton className="pl-4 pr-4 p-2">
-                Contact Me
-              </ShimmerButton>
-              </a>
+              <Link href="#skills" onClick={() => setIsOpen(false)} className='hover:bg-zinc-700 px-4 py-2 border-b border-zinc-700'>Skills</Link>
+              
+             
             </div>
           </div>
 

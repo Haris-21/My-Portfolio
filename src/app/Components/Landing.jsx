@@ -1,6 +1,8 @@
 import Experience from "./Experience";
 import Hero from "./Hero";
+import Projects from "./Projects";
 import Services from "./Services";
+import Skills from "./Skills";
 
 export default function Landing(){
     return(
@@ -14,6 +16,12 @@ export default function Landing(){
             </section>
             <section id="experience">
                 <Experience/>
+            </section>
+            <section id="projects">
+                <Projects/>
+            </section>
+            <section id="skills">
+                <Skills/>
             </section>
         </div>
         </>

@@ -8,6 +8,9 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { SiGmail } from "react-icons/si";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { IconBrandGithub } from "@tabler/icons-react";
+import { FloatingDock } from "@/components/ui/floating-dock";
+import { Dock, DockIcon } from "@/components/magicui/dock";
 
 export default function Hero(){
 
@@ -31,6 +34,32 @@ export default function Hero(){
   
   ];
 
+   const links = [
+    
+    {
+      title: "GitHub",
+      icon: (
+        <TbBrandGithubFilled className="h-full w-full text-zinc-700 " />
+      ),
+      href: "#",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <FaLinkedinIn/>
+      ),
+      href: "#"
+    },
+    {
+      title: "Gmail",
+      icon: (
+        <SiGmail/>
+      ),
+      href: "#"
+
+    }
+  ];
+
     return(
         <div className="relative flex flex-col justify-center items-center w-full h-screen border-b border-gray-700">
             <div className="2xl:w-[80%] lg:w-[95%] xl:w-[90%] md:w-[90%] sm:w-[90%] xs:w-[90%] 2xs:w-[90%] 3xs:w-[90%] text-white text-center font-sans font-semibold flex flex-col items-center">
@@ -45,14 +74,7 @@ export default function Hero(){
                   >
                   <InteractiveHoverButton>Get in touch | Download Resume</InteractiveHoverButton>
                   </a>
-                  <div className="flex justify-between items-center gap-3">
-                    <span className="text-3xl 2xl:block xl:block lg:block md:block sm:block xs:hidden 2xs:hidden 3xs:hidden"><RxDividerVertical/></span>
-                    <a href="https://www.linkedin.com/in/kunwar-muhammad-haris-20054422b/"   target="_blank" rel="noopener noreferrer" 
-                    className="text-2xl p-2 rounded-full bg-zinc-700"><FaLinkedinIn/></a>
-                    <a href="https://github.com/Haris-21" target="_blank" rel="noopener noreferrer" 
-                    className="text-2xl p-2 rounded-full bg-zinc-600"><TbBrandGithubFilled/></a>
-                    <a href="mailto:kunwarharis2004@gmail.com" className="text-2xl p-2 rounded-full bg-zinc-600"><SiGmail/></a>
-                  </div>
+                  
                 </div>                
             </div>
             <BackgroundBeams />
